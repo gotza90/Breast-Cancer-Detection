@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Breast Cancer Detection AI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">Breast Cancer Detection AI</h1>
+
+<p class="subtitle">Deep Learning Histopathology Analyzer</p>
+
+
+<div class="upload-card">
+
+<input type="file" id="imageUpload">
+
+<button onclick="uploadImage()">Analyze Image</button>
+
+</div>
+
+
+<div class="prediction-card">
+
+<h2>Prediction</h2>
+
+<div id="prediction">---</div>
+
+<div id="confidence"></div>
+
+
+<div class="confidence-bar">
+
+<div id="confidence-fill"></div>
+
+</div>
+
+</div>
+
+
+<div class="images">
+
+<div class="image-card">
+
+<h3>Original</h3>
+
+<img id="original">
+
+</div>
+
+
+<div class="image-card">
+
+<h3>GradCAM</h3>
+
+<img id="gradcam">
+
+</div>
+
+
+<div class="image-card">
+
+<h3>Overlay</h3>
+
+<img id="overlay">
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
